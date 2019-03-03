@@ -1,0 +1,69 @@
+<script>
+
+    var sum = +prompt("Enter sum:");
+	
+	var tax10 = 0;
+	var tax12 = 0;
+	var tax22 = 0;
+	var tax24 = 0;
+	var tax32 = 0;
+	var tax35 = 0;
+	var tax37 = 0;
+    
+	if(sum < 0){
+	 alert("не такуж все и плохо");
+	}else if(sum > 0 && sum <= 9525){
+	  var tax10 = sum * 10 / 100;
+	  alert(tax10 + " $");
+	}else {
+		var tax10 = 9525 * 10 / 100;
+	}
+	
+	
+	if(sum > 9525 && sum <= 38700){
+      var tax12 = (sum - 9525) * 12 / 100;
+	}else if(sum > 38701) {
+		var tax12 = (38701 - 9525) * 12 / 100;
+	}	
+	 
+	
+	
+	if(sum > 38700 && sum <= 82500){
+	   var tax22 = (sum - 38700) * 22 / 100;
+    }else if(sum > 82500) {
+		var tax22 = (82500 - 38700) * 22 / 100;
+	} 
+	
+	
+	if(sum > 82500 && sum <= 157500){
+	   var tax24 = (sum - 82500) * 24 / 100;
+	}else if(sum > 157500) {
+		var tax24 = (157500 - 82500) * 24 / 100;
+	} 
+	
+	if(sum > 157500 && sum <= 200000){
+	   var tax32 = (sum - 157500) * 32 / 100;
+    }else if(sum > 200000) {
+		var tax32 = (200000 - 157500) * 32 / 100;
+	} 
+	
+	
+	
+	if(sum > 200000 && sum <= 500000){
+	   var tax35 = (sum - 200000) * 35 / 100;
+       alert(tax35 + " $");
+	 }else if(sum > 500000) {
+		var tax35 = (500000 - 200000) * 35 / 100;
+	}  
+	
+	
+	if(sum > 500000){
+	   var tax37 = (sum - 500000) * 37 / 100;
+	   }
+	   
+	   
+	var sum2 = tax10 + tax12 + tax22 + tax24 + tax32 + tax35 + tax37;   
+	   
+	 alert(sum2 + " $");  
+	   
+</script>
